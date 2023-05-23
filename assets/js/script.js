@@ -1,7 +1,5 @@
 const apiKey = "5778367e5dfb4dcf8b6b1511a110cbe8";
 const url = `https://api.spoonacular.com/recipes/complexSearch`;
-// const searchForm=document.getElementById('form');
-// const searchButton=document.getElementById("#submit");
 const searchResultDiv= document.getElementById(".search-result");
 const container=document.querySelector(".container");
 let searchQuery='';
@@ -9,7 +7,7 @@ let searchQuery='';
 function handleSubmit(event) {
     event.preventDefault(); // Prevents the form from being submitted and the page from refreshing
     
-    const searchQuery = event.target.querySelector('input').value;
+    const searchQuery = event.target.getElementById('#input-text').value;
     console.log(searchQuery);
   }
   
@@ -19,8 +17,8 @@ function handleSubmit(event) {
 //     searchForm.addEventListener('click', myFunction);
 //   }
   
-   handleSubmit();
-  ;
+  
+
 
 
 function getApi() {
@@ -39,9 +37,6 @@ function getApi() {
         console.log(data);
       })};
 getApi();
-
-function searchRecepie(){
-
-}
+handleSubmit();
 
 
