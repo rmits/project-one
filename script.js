@@ -1,6 +1,6 @@
 const apiKey = "5778367e5dfb4dcf8b6b1511a110cbe8";
 const url = `https://api.spoonacular.com/recipes/complexSearch`;
-const searchInpitEl=document.getElementById('#searchInput').value;
+const searchInpitEl=document.getElementById('#searchInput');
 const searchBtn = document.getElementById("#submit");
 
 function getApi() {
