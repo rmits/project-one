@@ -23,19 +23,6 @@ function getApi() {
       })};
 getApi();
 
-  
-  
-//   searchForm.addEventListener('submit', function(event){
-//     event.preventDefault(); // Prevents the form from being submitted and the page from refreshing
-  
-//     const searchQuery = document.getElementById('input-text').value;
-//     console.log(searchQuery);
-//   });
-
-
-
-// handleSubmit();
-
 // Get the input field
 var input = document.getElementById("inputText");
 
