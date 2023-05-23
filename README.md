@@ -6,8 +6,8 @@ Scrummy food recipes App
 ## User Story
 
 AS A user
-I WANT a taco recipe application
-SO THAT my Taco Tuesday parties are lit
+I WANT a recipe application
+SO THAT my dinner is delightful
 AND i can have my friends over (and excuse for margs)
 
 ## Acceptance Criteria
