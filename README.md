@@ -1,4 +1,6 @@
 # project-one
+Scrummy food recipes App
+
 
 
 ## User Story
