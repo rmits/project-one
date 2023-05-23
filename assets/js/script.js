@@ -3,22 +3,7 @@ const url = `https://api.spoonacular.com/recipes/complexSearch`;
 const searchResultDiv= document.getElementById(".search-result");
 const container=document.querySelector(".container");
 let searchQuery='';
-
-function handleSubmit(event) {
-    event.preventDefault(); // Prevents the form from being submitted and the page from refreshing
-    
-    const searchQuery = event.target.getElementById('#input-text').value;
-    console.log(searchQuery);
-  }
-  
-  const searchForm = document.getElementById('#search-form'); //
-  searchForm.addEventListener('submit', handleSubmit);
-//   if (searchForm !== null) {
-//     searchForm.addEventListener('click', myFunction);
-//   }
-  
-  
-
+// const searchForm = document.getElementById('search-form');
 
 
 function getApi() {
@@ -37,6 +22,30 @@ function getApi() {
         console.log(data);
       })};
 getApi();
-handleSubmit();
+
+  
+  
+//   searchForm.addEventListener('submit', function(event){
+//     event.preventDefault(); // Prevents the form from being submitted and the page from refreshing
+  
+//     const searchQuery = document.getElementById('input-text').value;
+//     console.log(searchQuery);
+//   });
 
 
+
+// handleSubmit();
+
+// Get the input field
+var input = document.getElementById("inputText");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    console.log(event.target.value)
+  }
+});
