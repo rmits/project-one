@@ -41,12 +41,13 @@ searchForm.addEventListener("submit", async (e) => {
   displayRecipes(results);
 });
 
-async function searchIngredients(query, number = 10, includeNutrition = false) {
-  const baseUrl = `https://api.spoonacular.com/food/ingredients/search?apiKey=${API_KEY}`;
+async function searchIngredients(query, number = 10, includeNutrition = false, apiKey = API_KEY) {
+  const baseUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}`;
   const params = {
     query: query,
     number: number,
-    includeNutrition: includeNutrition
+    includeNutrition: includeNutrition,
+    apiKey: apiKey
   };
 
   const url = new URL(baseUrl);
