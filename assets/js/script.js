@@ -45,6 +45,61 @@ function displayRecipes(recipes) {
   });
 }
 
+// look here 
+const searchForm=document.getElementById('searchForm');
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  query = e.target.querySelector("input").value;
+  searchIngredients();
+});
+
+async function searchIngredients(query, number = 10, includeNutrition = false) {
+  const baseUrl = `https://api.spoonacular.com/food/ingredients/search&apiKey=${API_KEY}`;
+  
+  // Prepare the query parameters
+  const params = {
+    API_KEY: API_KEY,
+    query: query,
+    number: number,
+    includeNutrition: includeNutrition
+  };
+
+  // Construct the URL with query parameters
+  const url = new URL(baseUrl);
+  url.search = new URLSearchParams(params).toString();
+  
+  try {
+    // Send the GET request to the API
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error('Error occurred while fetching data from API');
+    }
+    
+    // Parse the response as JSON
+    const data = await response.json();
+    
+    // Return the search results
+    return data.results;
+  } catch (error) {
+    console.error(error);
+    // Handle error appropriately
+  }
+}
+const query = "";
+const number = 5;
+const includeNutrition = true;
+
+searchIngredients(API_KEY, query, number, includeNutrition)
+  .then(results => {
+    // Do something with the search results
+    console.log(results);
+  })
+  .catch(error => {
+    // Handle the error
+    console.error(error);
+  });
+
 // function for API call with the API key to get recipes. first it makes a call for a data, and awaiting for a response
 // if call returns with no errors, then it displays data from the source
 function getRecipes() {
