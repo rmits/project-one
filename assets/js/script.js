@@ -6,12 +6,15 @@ const recipeListEl = document.getElementById("recipe-list");
 
 function displayRecipes(recipes) {
   recipeListEl.innerHTML = "";
-  // 
+  // recipe list element is originally created as an empty string, so when it's called it goes back to blank/to clear out
   recipes.forEach((recipe) => {
     // this part of function iterates through each element in the list and adding recipe with the image
     const recipeItemEl = document.createElement("li");
+    // this constant creates new list 
     recipeItemEl.classList.add("recipe-item");
+    // this part adds new elemnts to the list above by the class "recipe-item"
     recipeImageEl = document.createElement("img");
+    // this part creates image element in html file 
 
     // this part grabs images from the fetch, and then display it on our element
     recipeImageEl.src = recipe.image;
