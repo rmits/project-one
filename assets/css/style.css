@@ -55,7 +55,7 @@ h1 {
 
 .recipe-item:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 12px hotpink;
+  box-shadow: 0 8px 12px orangered;
 }
 
 .recipe-item img {
