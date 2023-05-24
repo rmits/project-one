@@ -12,7 +12,7 @@ function displayRecipes(recipes) {
     const recipeItemEl = document.createElement("li");
     recipeItemEl.classList.add("recipe-item");
     recipeImageEl = document.createElement("img");
-    
+
     // this part grabs images from the fetch, and then display it on our element
     recipeImageEl.src = recipe.image;
     recipeImageEl.alt = "recipe image";
@@ -24,8 +24,8 @@ function displayRecipes(recipes) {
     recipeIngredientsEl = document.createElement("p");
     recipeIngredientsEl.innerHTML = `
         <strong>Ingredients:</strong> ${recipe.extendedIngredients
-          .map((ingredient) => ingredient.original)
-          .join(", ")}
+        .map((ingredient) => ingredient.original)
+        .join(", ")}
     `;
 
     recipeLinkEl = document.createElement("a");
@@ -48,17 +48,17 @@ function getRecipes() {
   return fetch(
     `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}`
   )
-    .then(function(response) {
+    .then(function (response) {
       return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
       return data.recipes;
     });
 }
 
 function init() {
   getRecipes()
-    .then(function(recipes) {
+    .then(function (recipes) {
       displayRecipes(recipes);
     });
 }
