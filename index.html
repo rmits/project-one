@@ -12,11 +12,12 @@
 <body>
     <header>
         <h1>Scrummy Food Recipes</h1>
-        <form>
-            <input type="text" id="searchForm" placeholder="Search Your Recipe...">
-            <ion-icon name="search"></ion-icon>
+        <form id="searchForm">
+            <input type="text" id="searchInput" />
+            <button type="submit">Search</button>
           </form>
-          <div class="search-result">
+          
+          <ul id="recipe-list"></ul>
     </header>
 
     <div class="container">
