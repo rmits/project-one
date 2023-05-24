@@ -1,4 +1,7 @@
 /* Reset default styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +11,7 @@
 /* Body styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
+  background-color: black;
   padding: 20px;
 }
 
@@ -21,6 +24,10 @@ header {
 h1 {
   font-size: 24px;
   font-weight: bold;
+  color:#fff;
+  font-family: 'Lobster', cursive;
+  
+  
 }
 
 /* Container styles */
@@ -43,6 +50,12 @@ h1 {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.recipe-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px hotpink;
 }
 
 .recipe-item img {
