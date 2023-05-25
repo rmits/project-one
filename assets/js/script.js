@@ -69,13 +69,11 @@ const searchForm = document.getElementById('searchForm');
 searchForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const query = e.target.querySelector("input").value;
-  const results = await searchIngredients(query);
-  searchIngredients(query)
-      .then(function (result) {
-        displaySearchRecipes(result);
-      });
+  const results = await searchIngredients(query)
+
+  displaySearchRecipes(results);
+  
   }
-  // displayRecipes(recipes);
 );
 
 async function searchIngredients(query, number = 10, apiKey = API_KEY) {
