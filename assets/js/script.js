@@ -33,20 +33,56 @@ function displayRecipes(recipes) {
   });
 }
 
+function displaySearchRecipes(result) {
+  recipeListEl.innerHTML = "";
+  result.forEach((recipe) => {
+    const recipeItemEl = document.createElement("li");
+    recipeItemEl.classList.add("recipe-item");
+
+    const recipeImageEl = document.createElement("img");
+    recipeImageEl.src = recipe.image;
+    recipeImageEl.alt = "recipe image";
+
+    const recipeTitleEl = document.createElement("h2");
+    recipeTitleEl.innerText = recipe.title;
+
+    const recipeIngredientsEl = document.createElement("p");
+    recipeIngredientsEl.innerHTML = `
+        <strong>Ingredients:</strong> ${recipe.extendedIngredients
+      .map((ingredient) => ingredient.original)
+      .join(", ")}`;
+
+    const recipeLinkEl = document.createElement("a");
+    recipeLinkEl.href = recipe.sourceUrl;
+    recipeLinkEl.innerText = "View Recipe";
+
+    recipeItemEl.appendChild(recipeImageEl);
+    recipeItemEl.appendChild(recipeTitleEl);
+    recipeItemEl.appendChild(recipeIngredientsEl);
+    recipeItemEl.appendChild(recipeLinkEl);
+
+    recipeListEl.appendChild(recipeItemEl);
+  });
+}
+
 const searchForm = document.getElementById('searchForm');
 searchForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const query = e.target.querySelector("input").value;
   const results = await searchIngredients(query);
-  displayRecipes(results);
-});
+  searchIngredients(query)
+      .then(function (result) {
+        displaySearchRecipes(result);
+      });
+  }
+  // displayRecipes(recipes);
+);
 
-async function searchIngredients(query, number = 10, includeNutrition = false, apiKey = API_KEY) {
-  const baseUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}`;
+async function searchIngredients(query, number = 10, apiKey = API_KEY) {
+  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}`;
   const params = {
     query: query,
     number: number,
-    includeNutrition: includeNutrition,
     apiKey: apiKey
   };
 
