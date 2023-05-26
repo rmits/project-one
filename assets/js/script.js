@@ -1,5 +1,7 @@
 const API_KEY = "5778367e5dfb4dcf8b6b1511a110cbe8";
+const API_KEY2 = "07419ae1c8f14d8d846b3e5773d17ea1";
 const recipeListEl = document.getElementById("recipe-list");
+const searchListEl = document.getElementById("search-list");
 
 function displayRecipes(recipes) {
   recipeListEl.innerHTML = "";
@@ -35,33 +37,34 @@ function displayRecipes(recipes) {
 
 function displaySearchRecipes(result) {
   recipeListEl.innerHTML = "";
-  result.forEach((recipe) => {
-    const recipeItemEl = document.createElement("li");
-    recipeItemEl.classList.add("recipe-item");
+  result?.map((search) => {
+    // issue starts here
+  const searchItemEl = document.createElement("li");
+  searchItemEl.classList.add("search-item");
 
-    const recipeImageEl = document.createElement("img");
-    recipeImageEl.src = recipe.image;
-    recipeImageEl.alt = "recipe image";
+    const searchImageEl = document.createElement("img");
+    searchImageEl.src = search.image;
+    searchImageEl.alt = "search image";
 
-    const recipeTitleEl = document.createElement("h2");
-    recipeTitleEl.innerText = recipe.title;
+    const searchTitleEl = document.createElement("h2");
+    searchTitleEl.innerText = search.title;
 
-    const recipeIngredientsEl = document.createElement("p");
-    recipeIngredientsEl.innerHTML = `
-        <strong>Ingredients:</strong> ${recipe.extendedIngredients
+    const searchIngredientsEl = document.createElement("p");
+    searchIngredientsEl.innerHTML = `
+        <strong>Ingredients:</strong> ${search.usedIngredients
       .map((ingredient) => ingredient.original)
       .join(", ")}`;
 
-    const recipeLinkEl = document.createElement("a");
-    recipeLinkEl.href = recipe.sourceUrl;
-    recipeLinkEl.innerText = "View Recipe";
+    const searchLinkEl = document.createElement("a");
+    searchLinkEl.href = search.sourceUrl;
+    searchLinkEl.innerText = "View Searched Recipe";
 
-    recipeItemEl.appendChild(recipeImageEl);
-    recipeItemEl.appendChild(recipeTitleEl);
-    recipeItemEl.appendChild(recipeIngredientsEl);
-    recipeItemEl.appendChild(recipeLinkEl);
+    searchItemEl.appendChild(searchImageEl);
+    searchItemEl.appendChild(searchTitleEl);
+    searchItemEl.appendChild(searchIngredientsEl);
+    searchItemEl.appendChild(searchLinkEl);
 
-    recipeListEl.appendChild(recipeItemEl);
+    searchListEl.appendChild(searchItemEl);
   });
 }
 
@@ -69,17 +72,23 @@ const searchForm = document.getElementById('searchForm');
 searchForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const query = e.target.querySelector("input").value;
-  const results = await searchIngredients(query)
+  // const results = await searchIngredients(query)
 
-  displaySearchRecipes(results);
+  // displaySearchRecipes(results); 
+  searchIngredients(query)
+  .then((results) => {
+    displaySearchRecipes(results);
+  })
+  .catch((error) => {
+    console.error(error);
   
-  }
+  })}
 );
 
-async function searchIngredients(query, number = 10, apiKey = API_KEY) {
-  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}`;
+async function searchIngredients(ingredients, number = 10, apiKey = API_KEY2) {
+  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}`;
   const params = {
-    query: query,
+    ingredients: ingredients,
     number: number,
     apiKey: apiKey
   };
@@ -95,7 +104,7 @@ async function searchIngredients(query, number = 10, apiKey = API_KEY) {
     }
 
     const data = await response.json();
-    return data.results;
+    return data;
   } catch (error) {
     console.error(error);
     // Handle error appropriately
@@ -104,7 +113,7 @@ async function searchIngredients(query, number = 10, apiKey = API_KEY) {
 
 function getRecipes() {
   return fetch(
-    `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}`
+    `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY2}`
   )
     .then(function (response) {
       return response.json();

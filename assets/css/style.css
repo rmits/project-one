@@ -37,14 +37,14 @@ h1 {
 }
 
 /* Recipe list styles */
-.recipe-list {
+.recipe-list, .search-list {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
 }
 
-.recipe-item {
+.recipe-item, .search-item {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -53,12 +53,12 @@ h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recipe-item:hover {
+.recipe-item:hover, .search-item:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 12px orangered;
 }
 
-.recipe-item img {
+.recipe-item img, .search-item img {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
@@ -66,16 +66,16 @@ h1 {
   margin-bottom: 10px;
 }
 
-.recipe-item h2 {
+.recipe-item h2, .search-item h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.recipe-item p {
+.recipe-item p, .search-item p {
   margin-bottom: 10px;
 }
 
-.recipe-item a {
+.recipe-item a, .search-item a {
   display: inline-block;
   padding: 6px 12px;
   background-color: #ff6600;
@@ -85,6 +85,6 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-.recipe-item a:hover {
+.recipe-item a:hover, .search-item a:hover {
   background-color: #e65300;
 }
