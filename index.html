@@ -2,27 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scrummy food recipes application</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrummy food recipes application</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <header>
-        <h1>Scrummy Food Recipes</h1>
-        <form id="searchForm">
-            <input type="text" id="searchInput" /> 
-            <button type="submit">Search</button>
-          </form>
-          
-          <ul id="recipe-list"></ul>
-    </header>
+  <header>
+    <h1>Scrummy Food Recipes</h1>
+    <form id="searchForm">
+      <input type="text" id="searchInput" />
+      <button type="submit" id="searchBtn">Search</button>
+    </form>
+  </header>
 
+  <main>
     <div class="container">
-        <ul id="recipe-list" class="recipe-list">
-            <!-- <li class="recipe-item">
+      <ul id="recipe-list" class="recipe-list">
+        <!-- <li class="recipe-item">
           <img
             src="https://spoonacular.com/recipeImages/12345-312x231.jpg"
             alt="Recipe 1"
@@ -58,9 +57,9 @@
           </p>
           <a href="#">View Recipe</a>
         </li> -->
-        </ul>
-        <ul id="search-list" class="search-list">
-                 <!-- <li class="search-item">
+      </ul>
+      <ul id="search-list" class="search-list">
+        <!-- <li class="search-item">
           <img
             src="https://spoonacular.com/recipeImages/12345-312x231.jpg"
             alt="Recipe 1"
@@ -97,9 +96,10 @@
           <a href="#">View Recipe</a>
         </li> -->
 
-        </ul>
+      </ul>
     </div>
-    <script src="./assets/js/script.js"></script>
+  </main>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

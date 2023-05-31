@@ -36,6 +36,7 @@ function displayRecipes(recipes) {
 }
 
 function displaySearchRecipes(result) {
+  searchListEl.innerHTML = "";
   recipeListEl.innerHTML = "";
   result?.map((search) => {
     // issue starts here
@@ -85,7 +86,7 @@ searchForm.addEventListener("submit", async (e) => {
   })}
 );
 
-async function searchIngredients(ingredients, number = 10, apiKey = API_KEY2) {
+async function searchIngredients(ingredients, number = 9, apiKey = API_KEY2) {
   const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}`;
   const params = {
     ingredients: ingredients,
@@ -113,7 +114,7 @@ async function searchIngredients(ingredients, number = 10, apiKey = API_KEY2) {
 
 function getRecipes() {
   return fetch(
-    `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY2}`
+    `https://api.spoonacular.com/recipes/random?number=9&apiKey=${API_KEY2}`
   )
     .then(function (response) {
       return response.json();
