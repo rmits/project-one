@@ -22,13 +22,15 @@ So that I can make decisions on what to cook easily and have access to multiple 
 </ul>
 
 # For this project we were required to use at least two server side APIs
-The two server side APIs used were from spoonacular which are <a href="https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}">API 1</a> and <a href="https://api.spoonacular.com/recipes/random?number=9&apiKey=${API_KEY2}">API 2</a>
+The two server side APIs used were from spoonacular which are <a href="https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}">randomly generated recipe on main page for someone who feels creative and adventurious 
+* search option based on ingridients by user's input to get recipies suggestions per user's input 
+</a> and <a href="https://api.spoonacular.com/recipes/random?number=9&apiKey=${API_KEY2}">each option based on ingredients by user's input to get recipies suggestions per user's input</a>
 <br/>
 # Some of the challenges we encountered working on this project are:
 
 <p>We encountered multiple blockers during the implementation of the search engine feature of our app ranging from unresponsive APIs to multiple bugs in our lines of code. Thankfully Our TA Ringo was there to teach us how to debug codes line by line and find breaking point(s)in our codes using chrome dev tools.</p>
 
-<p>We called the API Key so much while testing that we each had to sign up for API Keys to alternate with for whenever we got a 429 error.(A 429 error stands for too many requests in a short period of time to an API.</p>
+<p>We called the API Key so much while testing that we each had to sign up for API Keys to alternate with for whenever we got a 429 error.A 429 error stands for too many requests in a short period of time to an API.</p>
 <p>When the CSS for our second API wasn’t responsive our Instructor Rommel suggested we create separate sets of HTML and CSS codes to assign to its function. This absolutely worked!</p>
 <a href="https://developers.google.com/webmaster-tools/v1/errors">Google search console API</a> has an article on HTTPS status code and their meaning which helped in understanding why we kept getting the 429 error, what it meant and ways to avoid or prepare for it.
 
