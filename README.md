@@ -34,6 +34,7 @@ The two server side APIs used were from spoonacular which are <a href="https://a
 <p>When the CSS for our second API wasn’t responsive our Instructor Rommel suggested we create separate sets of HTML and CSS codes to assign to its function. This absolutely worked!</p>
 <a href="https://developers.google.com/webmaster-tools/v1/errors">Google search console API</a> has an article on HTTPS status code and their meaning which helped in understanding why we kept getting the 429 error, what it meant and ways to avoid or prepare for it.
 
+
 # We got the font for the name of our app from
 <a href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">Google Fonts</a>
 <p>Our JS file contained the Async/Await syntax which helps a function in javascript to return a promise and wait for promise respectively. To read more on this <a href="https://www.w3schools.com/js/js_async.asp#:~:text=async%20makes%20a%20function%20return,function%20wait%20for%20a%20Promise">W3schools</a></p>
