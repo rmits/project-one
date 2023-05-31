@@ -1,5 +1,4 @@
-# Interactive Frontend Project
-<h1>Scrummy Food Recipes Application</h1>
+#<h1>Scrummy Food Recipes Application</h1>
 
 ## User Story
 
@@ -26,7 +25,7 @@ This project is designed as an application with a dynamic search tool for desire
 
 
 # For this project we were required to use at least two server side APIs
-The two server side APIs used were from spoonacular which are <a href="https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}">randomly generated recipe on main page for someone who feels creative and adventurou</a> and <a href="https://api.spoonacular.com/recipes/random?number=9&apiKey=${API_KEY2}">search option based on ingredients by user's to get recipes suggestions </a>
+The two server side APIs used were from spoonacular which are <a href="https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}">randomly generated recipe on main page for someone who feels creative and adventurous</a> and <a href="https://api.spoonacular.com/recipes/random?number=9&apiKey=${API_KEY2}">search option based on ingredients by user's to get recipes suggestions </a>
 <br/>
 # Some of the challenges we encountered working on this project are:
 
