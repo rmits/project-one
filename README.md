@@ -22,7 +22,7 @@ So that I can make decisions on what to cook easily and have access to multiple 
 </ul>
 
 ## Getting Started
-This project is designed as an application with a dynamic search tool for desired recipe selection based on user's input of ingredint or collection of random recipes, so user will never run of ideas for this cook and eat!
+This project is designed as an application with a dynamic search tool for desired recipe selection based on user's input of ingredint or collection of random recipes, so user will never run out of ideas for cooking and eating!
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link.Or, download from gihub repository links mentioned below
 
 * GitHub Repository: https://github.com/rmits/project-one.git
