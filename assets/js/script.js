@@ -86,8 +86,8 @@ searchForm.addEventListener("submit", async (e) => {
   })}
 );
 
-async function searchIngredients(ingredients, number = 9, apiKey = API_KEY2) {
-  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}`;
+async function searchIngredients(ingredients, number = 9, apiKey = API_KEY) {
+  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}`;
   const params = {
     ingredients: ingredients,
     number: number,
@@ -114,7 +114,7 @@ async function searchIngredients(ingredients, number = 9, apiKey = API_KEY2) {
 
 function getRecipes() {
   return fetch(
-    `https://api.spoonacular.com/recipes/random?number=9&apiKey=${API_KEY2}`
+    `https://api.spoonacular.com/recipes/random?number=9&apiKey=${API_KEY}`
   )
     .then(function (response) {
       return response.json();
