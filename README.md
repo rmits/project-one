@@ -26,7 +26,8 @@ This project is designed as an application with a dynamic search tool for desire
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link.Or, download from gihub repository links mentioned below
 
 * GitHub Repository: https://github.com/rmits/project-one.git
-* Deployed URL: 
+* Deployed URL: https://rmits.github.io/project-one/
+
 
 
 
