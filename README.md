@@ -38,6 +38,10 @@ Search by ingredients is call to a second API that accepts user's input and by c
 ![image](https://github.com/rmits/project-one/assets/130412307/56691795-5081-47db-a698-8581590ecc39)
 searching parameters are being kept in search widget with local storage 
 
+![scrummy_food](https://github.com/rmits/project-one/assets/130412307/03c19070-85e3-4119-9b64-547ec16a40c3)
+
+
+
 
 
 ## Project requirements: 
@@ -68,4 +72,8 @@ html, css, javaScript
 
 
 ## Credits:
+* Anne Mary Wynter
+* Andy Lin
+* Oyindamola Jongbo
+* Ryan Mitchell
 
