@@ -28,6 +28,15 @@ This project has been deployed to GitHub Pages. To get this project up and runni
 * GitHub Repository: https://github.com/rmits/project-one.git
 * Deployed URL: https://rmits.github.io/project-one/
 
+Main page with randomly generated recipes API
+![image](https://github.com/rmits/project-one/assets/130412307/91f173f5-93f7-4bd0-abb6-f26e58271e93)
+it contains search widget and button plus recipes cards with recipes picture, text and "View recipe" button to navigate to recipe link
+
+![image](https://github.com/rmits/project-one/assets/130412307/b9300cce-567a-4feb-b759-efd7006a08af)
+
+Search by ingredients is call to a second API that accepts user's input and by click on the button pulls on the page collection of recipes related to the search
+![image](https://github.com/rmits/project-one/assets/130412307/56691795-5081-47db-a698-8581590ecc39)
+searching parameters are being kept in search widget with local storage 
 
 
 
