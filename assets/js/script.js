@@ -52,18 +52,14 @@ function displaySearchRecipes(result) {
 
     const searchIngredientsEl = document.createElement("p");
     searchIngredientsEl.innerHTML = `
-        <strong>Ingredients:</strong> ${search.usedIngredients
+        <strong>Ingredients:</strong> ${search.usedIngredients, search.missedIngredients
       .map((ingredient) => ingredient.original)
       .join(", ")}`;
-
-    const searchLinkEl = document.createElement("a");
-    searchLinkEl.href = search.sourceUrl;
-    searchLinkEl.innerText = "View Searched Recipe";
 
     searchItemEl.appendChild(searchImageEl);
     searchItemEl.appendChild(searchTitleEl);
     searchItemEl.appendChild(searchIngredientsEl);
-    searchItemEl.appendChild(searchLinkEl);
+    // searchItemEl.appendChild(searchLinkEl);
 
     searchListEl.appendChild(searchItemEl);
   });
