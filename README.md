@@ -25,8 +25,9 @@ So that I can make decisions on what to cook easily and have access to multiple 
 This project is designed as an application with a dynamic search tool for desired recipe selection based on user's input of ingredint or collection of random recipes, so user will never run out of ideas for cooking and eating!
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link.Or, download from gihub repository links mentioned below
 
-* GitHub Repository: https://github.com/rmits/project-one.git
-* Deployed URL: https://rmits.github.io/project-one/
+* Deployed:  https://rmits.github.io/scrummy-food-recipe-app/
+* GitHub repo: https://github.com/rmits/scrummy-food-recipe-app
+
 
 Main page with randomly generated recipes API
 ![image](https://github.com/rmits/project-one/assets/130412307/91f173f5-93f7-4bd0-abb6-f26e58271e93)
@@ -35,10 +36,10 @@ it contains search widget and button plus recipes cards with recipes picture, te
 ![image](https://github.com/rmits/project-one/assets/130412307/b9300cce-567a-4feb-b759-efd7006a08af)
 
 Search by ingredients is call to a second API that accepts user's input and by click on the button pulls on the page collection of recipes related to the search
-![image](https://github.com/rmits/project-one/assets/130412307/56691795-5081-47db-a698-8581590ecc39)
+
 searching parameters are being kept in search widget with local storage 
 
-![scrummy_food](https://github.com/rmits/project-one/assets/130412307/03c19070-85e3-4119-9b64-547ec16a40c3)
+![Untitled design (5)](https://github.com/rmits/scrummy-food-recipe-app/assets/130412307/fc714554-a027-4333-9cef-22ac2cdd5893)
 
 
 
@@ -68,6 +69,7 @@ html, css, javaScript
 <p>We called the API Key so much while testing that we each had to sign up for API Keys to alternate with for whenever we got a 429 error.A 429 error stands for too many requests in a short period of time to an API.</p>
 <p>When the CSS for our second API wasn’t responsive our Instructor Rommel suggested we create separate sets of HTML and CSS codes to assign to its function. This absolutely worked!</p>
 <a href="https://developers.google.com/webmaster-tools/v1/errors">Google search console API</a> has an article on HTTPS status code and their meaning which helped in understanding why we kept getting the 429 error, what it meant and ways to avoid or prepare for it.
+Second API call does not provide source URL for actual recipe link
 
 
 
